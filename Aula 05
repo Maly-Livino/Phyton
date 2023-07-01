@@ -11,6 +11,10 @@ var += 1
 """
 
 """
+-------------------------------------------------------------------------------------
+
+Exemplos:
+
 count = 0
 while count < 5:
     print("Valor de count =", count)
@@ -20,6 +24,9 @@ while count < 5:
 """
 
 """
+---------------------------------------------------------------------------------
+Exemplos:
+
 count = 0
 while count < 5:
     jogador = input ('Digite o nome do jogador:')
@@ -29,7 +36,10 @@ while count < 5:
 
 
 """
+----------------------------------------------------------------------------------------------
 1. Utilize laço de repetição para imprimir 10 vezes a mensagem "hello world" na tela
+
+Resolução:
 
 count = 0
 while count < 10:
@@ -38,8 +48,10 @@ while count < 10:
 """
 
 """
+----------------------------------------------------------------------------------------------
 2. Utilize laço de repetição para imprimir uma sequencia de 0 a 100
 
+Resolução:
 count = 0
 while count <= 100:
     print(count)
@@ -47,8 +59,10 @@ while count <= 100:
 """
 
 """
+---------------------------------------------------------------------------------------------------
 3. Utilize laço de repetição para imprimir uma sequencia de 0 até um numero digitado pelo usuário 
 
+Resolução:
 count = 0 
 num = int(input("Digite o numero desejado para a sequencia:"))
 while count <= num:
@@ -59,7 +73,10 @@ while count <= num:
 
 
 """
+---------------------------------------------------------------------------------------------------
 4. Utilize laço de repetição para imprimir todos os pares entre 0 e 100
+
+Resolução:
 
 count = 0
 while count <= 100:
@@ -70,7 +87,10 @@ while count <= 100:
 """
 
 """
+-----------------------------------------------------------------------------------------------------
 5. Utilize laço de repetição para imprimir todos os pares entre 0 e o numero digitado pelo usuário 
+
+Resolução:
 
 count = 0
 num = int(input("Digite o numero desejado para a sequencia:"))
@@ -82,6 +102,7 @@ while count < num:
 """
 
 """
+---------------------------------------------------------------------------------------------------------
 Desafio. Utilize laço de repetição para imprimir a seguinte sequencia
 I = 1 J = 3
 I = 2 J = 5
@@ -103,8 +124,11 @@ while I <= 9:
 
 
 """
+---------------------------------------------------------------------------------------------------------
 6. Leia 10 números utilizando laços de repetição e sempre que o número digitado for par, imprima a mensagem "Este número
  é par" 
+ 
+ Resolução:
  
  count = 0
 while count < 10:
@@ -118,8 +142,12 @@ while count < 10:
 """
 
 """
+-----------------------------------------------------------------------------------------------------
 7. Leia 10 números utilizando laços de repetição e sempre que o número for entre 60 e 100, imprimir a mensagem 
 "Este número esta dentro do intervalo" 
+
+
+Resolução:
 
 count = 0
 while count < 10:
@@ -132,7 +160,10 @@ while count < 10:
 """
 
 """
+---------------------------------------------------------------------------------------------
 8. Leia 10 números utilizando laços de repetição e ao final do laço informe a quantidade de números pares digitados
+
+Resolução:
 
 count = 0
 # Contador que ira armazenar a quantidade de numeros pares
@@ -145,5 +176,199 @@ while count < 10:
 print("A quantidade de numeros pares", pares)
 """
 
+"""
+----------------------------------------------------------------------------------------
+Break (break)
+> interrompe a execução do laço de repetição
 
 
+Continue (continue)
+> Ignora tudo que tá abaixo no laço e volta pro inicio
+
+Exemplo de break:
+
+while True:
+    login = input('Digite o seu login: ')
+    senha = input('Digite a sua senha: ')
+    if login == 'admin' and senha == '123':
+        print('Dados corretos!')
+        break
+
+
+Exemplo de continue: 
+
+count = 0
+while count <= 10:
+    if count == 7:
+        count += 1
+        continue
+    print(count)
+    count += 1
+"""
+
+"""
+------------------------------------------------------------------------------
+- Estrutura de repetição contável
+for
+
+função range()
+print(list(range(10)))
+
+for var in range(qtd):
+    <codigo>
+
+
+# count = 0
+# while count < 11:
+#     print(count)
+#     count += 1
+
+
+# [0, 1, 2, 3, 4]
+for i in range(6):
+    print(i)
+
+"""
+
+"""
+----------------------------------------------------------------------------
+1. Imprima "Hello world" 10 vezes na tela utilizando for 
+
+Resolução:
+
+for i in range(10):
+    print("Hello world")
+"""
+
+
+"""
+----------------------------------------------------------------------------
+2. Imprima uma sequencia de 0 a 100 utilizando o for
+
+Resolução:
+
+for i in range(101):
+    print(i)
+"""
+
+"""
+-----------------------------------------------------------------------------
+3. Imprima uma sequencia de 0 até um número digitado pelo usuário utilizando o for
+
+Resolução:
+
+num = int(input("Digite um numero:"))
+for i in range(num):
+    print(i)
+"""
+
+
+"""
+-----------------------------------------------------------------------------------
+
+4. Imprima todos os pares entre 0 e 100 utilizando for
+
+Resolução:
+
+for i in range(101):
+    if i % 2 == 0:
+        print(i)
+
+"""
+
+"""
+---------------------------------------------------------------------------------------
+5.Imprima todos os pares entre 0 e o numero digitado pelo usuario utilizando for
+
+Resolução:
+
+num = int(input("Digite um numero:"))
+for i in range(num):
+    if i % 2 == 0:
+        print(i)
+"""
+
+"""
+---------------------------------------------------------------------------------------
+6. Leia 10 numeros e ao final informe a quantidade de numeros pares e impares digitados pelo usuario
+
+Resolução:
+
+pares = 0
+impares = 0
+for i in range(10):
+    num = int(input("Digite um numero:"))
+    if num % 2 == 0:
+        pares += 1
+    else:
+        impares += 1
+print("Quantidade de numeros pares:", pares)
+print("Quantidade de numeros impares:", impares)
+"""
+
+"""
+------------------------------------------------------------------------------------------------------
+7. Leia 10 números e ao final informe a quantidade de números maiores que 20, a quantidade de multiplos de 3 e 5, a 
+quantidade de números entre 50 e 70
+
+Resolução:
+
+maior = 0
+multi = 0
+entre = 0
+
+for i in range(10):
+    num = int(input("Digite o numero:"))
+    if num > 20:
+        maior += 1
+
+    if num % 3 == 0 and num % 5 == 0:
+        multi += 1
+
+    if 50 <= num <= 70:
+        entre += 1
+
+
+print("A quantidade de numeros maiores que 20:", maior)
+print("A quantidade de multiplos de 3 e 5:", multi)
+print("A quantidade de numeros entre 50 e 70:", entre)
+
+"""
+
+
+
+"""
+---------------------------------------------------------------------------------------
+8. Leia um número e informe se ele é ou não um número primo
+número primo é um número que só é divisivel por 1 por ele mesmo
+
+
+Resolução:
+
+"""
+
+
+"""
+-----------------------------------------------------------------------------------------
+9. Imprima a seguinte sequencia
+I = 1 J = 1
+I = 2 J = 2
+I = 3 J = 3
+I = 4 J = 1
+I = 5 J = 2
+I = 6 J = 3
+...
+...
+..
+I = 30 J = ?
+
+Resolução:
+
+i = 1
+j = 1
+
+while i <= 30:
+    print(f" I = {i} J = {j}")
+    
+
+"""
