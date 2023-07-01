@@ -1,0 +1,315 @@
+""" Operadores relacionais
+
+Maior que >
+Mneor que <
+Maior ou igual >=
+Menor ou igual <=
+Diferente !=
+Igual ==
+----------------------------------------
+Operadores Lógicos
+
+and => Só da verdadeiro se todas as operações forem verdadeira
+or => Só dafalse se todas as operações forem falsas
+not => Inverte o resultado da expressão
+
+-------------------------------------------------
+
+if expressão:
+    codigo
+else:
+    codigo
+
+"""
+"""
+login = input('Digite o login:')
+senha = input('Digite sua senha:')
+
+if login == 'infinity' and senha == '123':
+    print("Bem vindo!")
+else:
+    print('Acho que digitou errado, tente novamente!')
+
+"""
+
+
+
+"""
+1. Leia um número e informe se ele é positivo ou negativo
+
+num = float(input('Digite o numero:'))
+
+if num >= 0:
+    print('O numero é positivo')
+else:
+    print('O numero é negativo')
+"""
+
+
+
+
+
+"""
+2. Leia dois números e informe o maior
+
+num1 = float(input('Digite o valor 1:'))
+num2 = float(input('Digite o valor 2 :'))
+
+if num1 > num2:
+    print('o numero maior é:', num1)
+else:
+    print('o numero maior é:', num2)
+    
+"""
+
+
+"""
+3. Leia um número e informe se ele é par ou ímpar
+
+num1 = float(input('Digite o numero:'))
+
+if num1 % 2 == 0 :
+    print('O numero é par')
+else:
+    print('O número é impar')
+
+"""
+
+
+"""
+4. Leia o DDD da cidade de um usuário e informe se ele é ou não de Fortaleza
+
+telefone = int(input('Digite o seu DDD:'))
+
+if telefone == 85:
+    print('Você é de Fortaleza')
+else:
+    print('Voce não é de Fortaleza')
+
+
+"""
+
+
+
+"""
+5. Leia 4 valores inteiros A, B, C e D. A seguir, se B for maior do que C e se D for maior do que A, e a soma de C com D 
+for maior que a soma de A e B e se C e D forem positivos e se A for par escrever a mensagem "Valores aceitos" senão 
+escrever a mensagem "Valores não aceitos"
+
+
+A = int(input('Entre os valores 2,3,2,6 escolha para ser o valor de A:'))
+B = int(input('Entre os valores 2,3,2,6 escolha para ser o valor de B:'))
+C = int(input('Entre os valores 2,3,2,6 escolha para ser o valor de C:'))
+D = int(input('Entre os valores 2,3,2,6 escolha para ser o valor de D:'))
+
+
+if B > C and D > A and C + D > A + B and C >= 0 and D >= 0 and A % 2 == 0:
+    print("Valores Aceitos")
+else:
+    print('Valores não aceitos')
+
+"""
+
+"""
+1. Leia um DDD e informe a cidade de acordo com o DDD digitado
+85 - Fortaleza
+11 - Sao Paulo
+21 - Rio de Janeiro
+88 - Interior Ceará
+Outro DDD - "DDD Não encontrado"
+
+
+ddd = int(input('Digite o seu DDD:'))
+
+if ddd == 85:
+    print('Voce é de Fortaleza')
+elif ddd == 11:
+    print('Voce e de São Paulo')
+elif ddd == 21:
+    print('Voce e do Rio de Janeiro')
+elif  ddd == 88:
+    print('Voce e do Interior do Ceara')
+else:
+    print('DDD não encontrado')
+"""
+
+
+"""
+2. Leia peso e altura de um usuário, calcule o seu IMC e de acordo com o seu IMC informe a sua faixa na tabela 
+IMC < 18.5 => ABAIXO DO PESO
+IMC ENTRE 18.5 - 24.9 => PESO IDEAL
+IMC ENTRE 25 - 29.9 => EXCESSO DE PESO
+IMC > 30 => OBESIDADE
+
+peso = float(input('Digite seu peso:'))
+altura = float(input('Digite sua altura:'))
+
+imc = (peso / altura ** 2
+
+if imc < 18.5:
+    print('Abaixo do Peso')
+elif imc >= 18.5 and imc <= 24.9:
+    print('Peso Ideal')
+elif imc >= 25 and imc >= 29.9:
+    print('Excesso de Peso')
+elif imc3 > 30:
+    print('Obesidade')
+else:
+    print('Não foi possivel calcular')
+
+"""
+
+
+"""
+3. Leia três notas calcule a média e de acordo com a média informe a mensagem
+Media entre 8 - 10 => "Aprovado com honras"
+Média entre 6 - 8 => "Aprovado"
+Media entre 4 - 6 => "Recuperação"
+Média < 4 => "Reprovado"
+
+
+nota1 = float(input('Digite a primeira Nota:'))
+nota2 = float(input('Digite a Segunda Nota:'))
+nota3 = float(input('Digite a Terceira Nota:'))
+
+media = (nota1+nota2+nota3)/3
+
+if media >= 8 and media <= 10:
+    print('Aprovadp com honras')
+elif media >= 6 and media <= 8:
+    print('Aprovado')
+elif media >= 4 and media <= 6:
+    print('Recuperação')
+elif media <4:
+    print('Reprovado')
+else:
+    print('Não foi possivel calcular')
+"""
+
+
+
+"""
+
+4. Uma empresa decidiu dar um aumento no salário dos funcionários, porém o percentual de aumento dependerá do cargo. 
+Escreva um programa que leia o cargo e o salário de um funcionário em seguida informe seu novo salário, se o usuário 
+digitar um cargo não contido na lista informe "cargo inválido"
+
+estagiario = aumento 10%
+analista = aumento 15%
+tester = aumento 17%
+gerente aumento 19%
+
+
+cargo = input('Digite qual o seu cargo:')
+salario = float(input('Digite qual o seu salario:'))
+
+if cargo =="estagiario":
+    salario = salario * 1.1
+    print("Seu salario subiu para:", salario)
+elif cargo == "analista":
+    salario = salario * 1.15
+    print("Seu salario subiu para:", salario)
+elif cargo == "tester":
+    salario = salario * 1.17
+    print("Seu salario subiu para:", salario)
+elif cargo == 'gerente':
+    salario = salario * 1.19
+else:
+    print('Cargo invalido')
+
+"""
+
+"""
+5. Leia três lados de um triangulo e informe se ele é um triangulo isóceles, escaleno ou equilatero
+triangulo equilatero = tres lados iguais
+triangulo isoceles = dois lados iguais
+triangulo escaleno = todos os lados diferentes 
+
+lado1 = int(input('Digite o valor do Lado 1:'))
+lado2 = int(input('Digite o valor do Lado 2:'))
+lado3 = int(input('Digite o valor do Lado 3:'))
+
+if lado1 == lado2 and lado2 == lado3:
+    print('Triangulo Equilatero')
+elif lado1 == lado2 and lado2 != lado3:
+    print("Triangulo Isoceles")
+elif lado1 != lado2 and lado2 != lado3:
+    print('Triangulo Escaleno')
+else:
+    print('Não foi possivel reconhecer')
+"""
+
+"""
+6-A multa por excesso de velocidade em um radar é de 300 reais, porém este valor pode dobrar caso a velocidade seja 40% 
+acima do permitido
+leia a velocidade de um veiculo e em seguida verifique se ele está acima do permitido ou muito acima do permitido e
+ informe o valor da multa que ele irá receber. Caso não esteja acima do limite informe 
+ "Você andou dentro do limite permitido" 
+ 
+ velocidade = float(input('Digite qual foi a velocidade do veiculo:'))
+
+limite = float(input('Digite o limite de velocidade da Rodovia:'))
+
+if velocidade > limite:
+    print('Recebera uma multa de 300 reais')
+elif velocidade > limite+(limite * 0.4):
+    multa = 300 * 2
+    print("Pasaou muito a mais que o limite, valor da Multa:", multa )
+else:
+    print("Voce andou dentro do limite permitido")
+"""
+"""
+9. Pedra, papel e tesoura. Leia a jogada de dois jogadores no jogo pedra, papel e tesoura e informe o vencedor ou se deu empate
+pedra > tesoura
+tesoura > papel
+papel > pedra
+
+
+jogador1 = input('Informe sua Jogada 1:')
+jogador2 = input('Informe sua Jogada 2:')
+
+if jogador1 == "pedra" and jogador2 == "tesoura":
+    print('Vencedor Jogador 1')
+elif jogador1 =="papel" and jogador2 == "pedra":
+    print('Vencedor Jogador 2')
+elif jogador1 == "tesoura" and jogador2 == "papel":
+    print("Vencedor Jogador 1")
+elif jogador1  =="tesoura" and jogador2 =="pedra":
+    print("Vencedor Jogador 2")
+elif jogador1 == "pedra" and jogador2 == "papel":
+    print("Vencedor Jogador 2")
+elif jogador1 == "papel" and jogador2 =="tesoura":
+    print('Vencedor Jogador 2')
+elif jogador1 == "pedra" and jogador2 =="pedra":
+    print('Empate')
+elif jogador1 == "papel" and jogador2 == "papel":
+    print('Empate')
+elif jogador1 == "tesoura" and jogador2 == "tesoura":
+    print('Empate')
+else:
+    print('Não foi possivel reconhecer')
+"""
+
+jogador1 = input('Informe sua Jogada 1:')
+jogador2 = input('Informe sua Jogada 2:')
+
+if jogador1 == "pedra" and jogador2 == "tesoura":
+    print('Vencedor Jogador 1')
+elif jogador1 =="papel" and jogador2 == "pedra":
+    print('Vencedor Jogador 2')
+elif jogador1 == "tesoura" and jogador2 == "papel":
+    print("Vencedor Jogador 1")
+elif jogador1  =="tesoura" and jogador2 =="pedra":
+    print("Vencedor Jogador 2")
+elif jogador1 == "pedra" and jogador2 == "papel":
+    print("Vencedor Jogador 2")
+elif jogador1 == "papel" and jogador2 =="tesoura":
+    print('Vencedor Jogador 2')
+elif jogador1 == "pedra" and jogador2 =="pedra":
+    print('Empate')
+elif jogador1 == "papel" and jogador2 == "papel":
+    print('Empate')
+elif jogador1 == "tesoura" and jogador2 == "tesoura":
+    print('Empate')
+else:
+    print('Não foi possivel reconhecer')
